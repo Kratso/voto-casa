@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { store } from './app/store';
+import { store } from './services/store';
 import { Provider } from 'react-redux';
 import { 
     BrowserRouter as Router,
     Switch,
     Route
   } from 'react-router-dom';
-import { Login } from './Login';
-
+import { Login } from './components/login/Login';
+import { Votaciones } from './components/votos/Votacion'
+ 
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,13 @@ ReactDOM.render(
               : <Login />
             }
           </Route>
+          <Route exact path="/votacion">
+            {store.getState().isLoggedIn 
+              ? <App />
+              : <Votaciones />
+            }
+          </Route>
+          
         </Switch>
       </Router>
       
