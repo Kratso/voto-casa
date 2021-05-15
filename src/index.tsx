@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import { store } from './services/store';
 import { Provider } from 'react-redux';
 import { 
@@ -18,18 +17,13 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/">
+        <Route path="/">
             {store.getState().isLoggedIn 
-              ? <App />
+              ? <Votaciones />
               : <Login />
             }
           </Route>
-          <Route exact path="/votacion">
-            {store.getState().isLoggedIn 
-              ? <App />
-              : <Votaciones />
-            }
-          </Route>
+          
           
         </Switch>
       </Router>

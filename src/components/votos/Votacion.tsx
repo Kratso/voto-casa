@@ -1,6 +1,6 @@
 import React from 'react';
 
 
-export class Votaciones extends React.Component<> {
-	
+export class Votaciones extends React.Component {
+
 }
