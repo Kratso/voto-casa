@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
-import {Router, Switch, Route} from 'react-router-dom';
+import { 
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from 'react-router-dom';
 import { Login } from './Login';
 
 
