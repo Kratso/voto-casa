@@ -16,14 +16,18 @@ code {
     monospace;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background-image: url("./login-background.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 }
 
@@ -49,4 +53,51 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.votacion-container {
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.lista-casas {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: blanchedalmond;
+}
+
+.lista-casas div {
+  margin: 5px;
+  text-align: left;
+}
+
+.casa-card {
+  width: 25vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.casa-card * {
+  margin: 2px ;
+}
+
+.casa-card img {
+  width: 15vw ;
+  margin-bottom: 7px;
+}
+
+.casa-dialog-container{
+  width: 70vw;
+}
+.casa-dialog {
+  margin-right: 10px;
+  margin-left: 10px;
 }
