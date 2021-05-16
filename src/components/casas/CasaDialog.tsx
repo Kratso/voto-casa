@@ -1,11 +1,9 @@
 import React from 'react';
+import { Casa } from '../../services/casas/index';
 
 
 interface CasaDialogProps {
-	nombre: string,
-	localizacion: string,
-	imagenes: string[],
-	precio: number,
+	casa: Casa
 }
 
 export class CasaDialog extends React.PureComponent<CasaDialogProps>{
