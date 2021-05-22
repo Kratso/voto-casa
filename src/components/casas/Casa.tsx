@@ -22,16 +22,15 @@ export const ShowCasa: React.FunctionComponent<IShowCasaProps> = (props:IShowCas
 			</Label>
 			<Carousel 
 				className="carrousel"
-				autoPlay={true}
+				autoPlay={false}
 				centerMode={true}
-				centerSlidePercentage={70}
-				dynamicHeight={false}
+				dynamicHeight={true}
 				infiniteLoop={true}
-
+				
 			>
 				{imagenes.map(img=>(
 					<div>
-						<img src={img} alt={nombre + " imagen"} />
+						<img src={img} alt={nombre + " imagen"} className="carousel-img" />
 					</div>
 				))}
 			</Carousel>

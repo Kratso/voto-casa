@@ -127,3 +127,21 @@ a {
   margin-left: 20px;
   color: blanchedalmond;
 }
+
+.slide .carousel-img {
+  height: 50vh;
+  width: auto!important;
+}
+
+.slide div {
+  width: fit-content;
+  margin: 0!important;
+  padding: 0!important
+}
+
+.slide {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
