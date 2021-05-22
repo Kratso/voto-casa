@@ -1,7 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import casasReducer from './casas/index'
+import usuariosReducer from './usuarios/index';
+import votosReducer from './votos/index';
 
 export const store = configureStore({
   reducer: {
+    casasReducer,
+    usuariosReducer,
+    votosReducer
   },
 });
 

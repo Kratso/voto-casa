@@ -1,8 +1,7 @@
-import { Dialog, InputGroup, Label } from '@blueprintjs/core';
+import { Dialog } from '@blueprintjs/core';
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import { Casa } from '../../services/casas/index';
-import { formatNumber } from '../votos/Votacion';
+import { ShowCasa } from './Casa';
 
 
 interface CasaDialogProps {
@@ -13,7 +12,7 @@ interface CasaDialogProps {
 
 export class CasaDialog extends React.PureComponent<CasaDialogProps>{
 	render(){
-		const {nombre, localizacion, imagenes, precio, numeroDeHuespedes} = this.props.casa
+		const {nombre} = this.props.casa
 
 		return (
 			<Dialog
@@ -24,28 +23,7 @@ export class CasaDialog extends React.PureComponent<CasaDialogProps>{
 				title={nombre}
 			>
 				<div className="casa-dialog">
-					<h2>{localizacion}</h2>
-					<Label className="bp3-inline">
-						Precio por Noche: <InputGroup disabled leftIcon="euro" value={formatNumber(precio)} />
-					</Label>
-					<Label className="bp3-inline">
-						Número de Huéspedes: <InputGroup disabled leftIcon="person" value={numeroDeHuespedes.toString()} />
-					</Label>
-					<Carousel 
-						className="carrousel"
-						autoPlay={true}
-						centerMode={true}
-						centerSlidePercentage={70}
-						dynamicHeight={false}
-						infiniteLoop={true}
-
-					>
-						{imagenes.map(img=>(
-							<div>
-								<img src={img} alt={nombre + " imagen"} />
-							</div>
-						))}
-					</Carousel>
+					<ShowCasa casa={this.props.casa} />
 				</div>
 			</Dialog>
 		)

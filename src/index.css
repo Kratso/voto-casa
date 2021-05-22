@@ -25,14 +25,22 @@ ul {
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-height: 100vh;
   background-image: url("./login-background.jpeg");
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
 }
 
+.nav-selected {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .main-container {
   margin:auto;
+  width: 50vw;
+  min-width: 450px;
 }
 
 .login-input-label {
@@ -58,7 +66,18 @@ ul {
 .votacion-container {
   margin: auto;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.resultados-container {
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

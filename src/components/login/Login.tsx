@@ -7,7 +7,7 @@ type UserData = {
 }
 
 interface LoginProps {
-	login : (userData: UserData) => void;
+	login : (username: string, password: string) => void;
 }
 
 export const Login : React.FunctionComponent<LoginProps> = (props) => {
@@ -47,7 +47,7 @@ export const Login : React.FunctionComponent<LoginProps> = (props) => {
 						className="login-button"
 						icon="log-in"
 						intent={Intent.PRIMARY}
-						onClick={()=>{props.login(userData)}}
+						onClick={()=>{props.login(userData.username, userData.password)}}
 						text="Login"
 					/>
 				</FormGroup>
