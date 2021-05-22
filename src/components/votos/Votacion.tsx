@@ -70,7 +70,8 @@ export const Votaciones : React.FunctionComponent<IVotacionesProps> = (props:IVo
 		localizacion: "",
 		imagenes: [],
 		precio: 0,
-		numeroDeHuespedes: 0
+		numeroDeHuespedes: 0,
+		url: ''
 	} as Casa);
 	const [openAlert, toggleAlert] = useState(false);
 
