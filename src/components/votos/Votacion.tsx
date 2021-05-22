@@ -29,12 +29,12 @@ const DragNDrop = ({casas, handleOnDragEnd, handleOpenDialogCasa} : any) => {
 		<Droppable droppableId="casas">
 			{(provided)=> (
 				<ul className="lista-casas" {...provided.droppableProps} ref={provided.innerRef}>								{
-						casas.map((({nombre, localizacion, imagenes, precio, numeroDeHuespedes} : any, index: number) => (
+						casas.map((({nombre, localizacion, imagenes, precio, numeroDeHuespedes, url} : any, index: number) => (
 							<Draggable key={nombre} draggableId={nombre} index={index}>
 								{
 									(provided)=>(
 										<li  ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-											<Card interactive={true} onClick={()=>handleOpenDialogCasa({nombre, localizacion, imagenes, precio, numeroDeHuespedes})} className="casa-card">
+											<Card interactive={true} onClick={()=>handleOpenDialogCasa({nombre, localizacion, imagenes, precio, numeroDeHuespedes, url})} className="casa-card">
 												<h2>{nombre}</h2>
 												<h3>{localizacion}</h3>
 												<img src={imagenes[0]} alt="Portada" />

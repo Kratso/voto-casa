@@ -13,7 +13,7 @@ interface CasaDialogProps {
 export class CasaDialog extends React.PureComponent<CasaDialogProps>{
 	render(){
 		const {nombre} = this.props.casa
-
+		console.log(this.props.casa)
 		return (
 			<Dialog
 				className="bp3-dark casa-dialog-container"

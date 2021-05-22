@@ -11,6 +11,7 @@ const casasSlice = createSlice({
 	},
 	reducers: {
 		updateCasas: (state, action) =>{
+			console.log(action.payload)
 			state.casas = action.payload
 		}
 	},
@@ -25,6 +26,7 @@ export const fetchCasas = () => {
 		await fetch(casasURL)
 			.then(res => res.json())
 			.then(res => {
+				console.log(res)
 				dispatch(casasSlice.actions.updateCasas(res))
 		})
 		
