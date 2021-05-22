@@ -37,6 +37,7 @@ export type Casa = {
 	imagenes: string[],
 	precio: number,
 	numeroDeHuespedes: number,
+	url: string
 }
 
 export const { updateCasas } = casasSlice.actions;

@@ -10,7 +10,7 @@ interface IShowCasaProps {
 
 export const ShowCasa: React.FunctionComponent<IShowCasaProps> = (props:IShowCasaProps) => {
 	
-	const {nombre, localizacion, imagenes, precio, numeroDeHuespedes} = props.casa
+	const {nombre, localizacion, imagenes, precio, numeroDeHuespedes, url} = props.casa
 
 	return (
 		<>
@@ -36,6 +36,9 @@ export const ShowCasa: React.FunctionComponent<IShowCasaProps> = (props:IShowCas
 					</div>
 				))}
 			</Carousel>
+			<Label className="bp3-inline">
+				Url en AirBnB: <InputGroup disabled value={url} />
+			</Label>
 		</>
 	)
 }

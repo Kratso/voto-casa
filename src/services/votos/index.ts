@@ -16,6 +16,7 @@ const votosSlice = createSlice({
 			imagenes: [],
 			precio: 0,
 			numeroDeHuespedes: 0,
+			url: ''
 		},
 		votos: 0
 	},
